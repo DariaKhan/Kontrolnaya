@@ -70,3 +70,50 @@ void PrintStringLength(int[] array)
     }
 }
 
+// создаем метод для подсчтета длины нового массива
+
+ int NewArrayLength (string[] stringArray)
+ {
+    int count = 0;
+        for (int i = 0; i < stringArray.Length; i++)
+        {
+            if (stringArray[i].Length <=3)
+            {
+                count++;
+            }
+        }
+        return count;
+  }
+
+// Создаем новый массив, исключая строки, превышающие 3 символа
+
+string[] StringArrayLess3Symbols (string[] stringArray, int[] array, int newLengthless3Symbols)
+{
+    string [] filteredArray = new string [newLengthless3Symbols];
+    int j=0;
+    for (int i = 0; i < array.Length; i++)
+    {
+
+        if (array [i] <=3)
+        {
+            filteredArray [j] = stringArray [i];
+            j++;
+        }
+
+    }
+    return filteredArray;
+}
+
+void PrintFileteredArray(string[] array)
+{
+     Console.Write("Значения отфильтрованного массива:");
+     Console.WriteLine();
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Строка {i + 1}: ");
+        Console.WriteLine (array[i]);
+    }
+}
+
+
