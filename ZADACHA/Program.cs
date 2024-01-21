@@ -44,3 +44,29 @@ void PrintStringArray(string[] array)
         Console.WriteLine (array[i]);
     }
 }
+// создаем метод для подсчтета длины каждой строки, каждое значение 
+// вносим в массив
+
+ int[] CalculateLengths(string[] stringArray)
+ {
+    int[] lengths = new int[stringArray.Length];
+        for (int i = 0; i < stringArray.Length; i++)
+        {
+            lengths[i] = stringArray[i].Length;
+        }
+        return lengths;
+  }
+// пишем метод для вывода на печать длину каждой строки массива
+
+void PrintStringLength(int[] array)
+{
+     Console.Write("Ваши строки имеют следующее значение длины:");
+     Console.WriteLine();
+     
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Строка {i + 1}: ");
+        Console.WriteLine (array[i]);
+    }
+}
+
