@@ -116,4 +116,20 @@ void PrintFileteredArray(string[] array)
     }
 }
 
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------
+
+string [] filledArray = InputStringArray(myArrayLength);
+PrintStringArray (filledArray);
+
+int [] stringLength = CalculateLengths (filledArray);
+PrintStringLength (stringLength);
+
+int FilteredArrayLength = NewArrayLength (filledArray);
+Console.WriteLine ($"Длина нового отфильтрованного массива: {FilteredArrayLength}");
+
+string [] FArray = StringArrayLess3Symbols (filledArray, stringLength, FilteredArrayLength);
+PrintFileteredArray (FArray);
+
 
