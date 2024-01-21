@@ -9,3 +9,38 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
+// Для начала даем возможность пользователю определиться с длиной массива и 
+// попросим его ввести целое положительное число от 1 до 10
+// Чтобы не утяжелять программу не будем проверять на правильность вводимое число,
+// предполагая, что пользователь не ошибается.
+
+Console.WriteLine("Пожалуйста, введите число от 1 до 10 для определения длины массива:");
+int myArrayLength = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Введенное вами значения длины массива: {myArrayLength}");
+
+// введем с консоли значения нашего массива
+
+string[] InputStringArray(int arrayLength)
+{
+    string[] stringArray = new string[arrayLength];
+    for (int i = 0; i < arrayLength; i++)
+    {
+        Console.Write($"Строка {i + 1}: ");
+        stringArray[i] = Console.ReadLine();
+    }
+    return stringArray;
+}
+
+// выведем на печать созданный нами массив
+
+void PrintStringArray(string[] array)
+{
+     Console.Write("Значения введенного массива:");
+     Console.WriteLine();
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"Строка {i + 1}: ");
+        Console.WriteLine (array[i]);
+    }
+}
